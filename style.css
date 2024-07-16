@@ -1,0 +1,63 @@
+.greenway {
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+    background: black;
+    height: 100vh;
+    padding: 1rem;
+    gap:2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+/*Hovering is "on your lefting"*/
+.greenway:hover {
+    .pedestrians {
+        justify-content: flex-end;
+    }
+
+    .runner {
+        display:none;
+    }
+
+    .runner-shouting {
+        display:block;
+    }
+}
+
+.median {
+    /*A mid median*/
+    position:absolute;
+    height: 100%;
+    left: 50%;
+    border-right: 1rem dashed yellow;
+}
+
+.pedestrians {
+    /*Styling for a group of pedestrians*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+
+
+.pedestrian {
+    /*This code just puts the pedestrians above the median*/
+    position:sticky;
+    z-index: 1;
+    width: 20%;
+}
+
+.runner {
+    width: 30%;
+}
+
+.runner-shouting {
+    width: 30%;
+    display:none;
+}
